@@ -37,7 +37,7 @@ namespace iRoloDex.Data
 
         public DbSet<Household> Households { get; set; }
         public DbSet<Person> Persons { get; set; }
-        public DbSet<Relationship> RRelationships { get; set; }
+        public DbSet<Relationship> Relationships { get; set; }
         public DbSet<Owner> Owners { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
