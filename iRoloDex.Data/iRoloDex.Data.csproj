@@ -88,7 +88,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Household.cs" />
+    <Compile Include="Entities\Relationship.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Entities\Owner.cs" />
+    <Compile Include="Entities\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
