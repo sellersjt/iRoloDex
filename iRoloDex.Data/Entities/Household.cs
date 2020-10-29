@@ -35,5 +35,7 @@ namespace iRoloDex.Data.Entities
             this.HouseholdViewers = new HashSet<ApplicationUser>();
         }
         public virtual ICollection<ApplicationUser> HouseholdViewers { get; set; }
+
+        public virtual ICollection<Person> Persons { get; set; } = new LinkedList<Person>();
     }
 }
