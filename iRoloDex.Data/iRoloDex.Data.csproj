@@ -87,6 +87,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Household.cs" />
     <Compile Include="Entities\Relationship.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Entities\Owner.cs" />
