@@ -316,6 +316,14 @@
       <Project>{EB2C2CA9-462C-4216-800B-4267A98D5BC8}</Project>
       <Name>iRoloDex.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\iRoloDex.Models\iRoloDex.Models.csproj">
+      <Project>{38f3261d-0225-4849-887e-ec86b302a33b}</Project>
+      <Name>iRoloDex.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iRoloDex.Services\iRoloDex.Services.csproj">
+      <Project>{ddb32c69-fbf3-4a6c-bbd6-4d3db4e6cbb7}</Project>
+      <Name>iRoloDex.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
