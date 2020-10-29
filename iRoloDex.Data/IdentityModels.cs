@@ -3,6 +3,7 @@ using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using iRoloDex.Data.Entities;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
@@ -32,13 +33,12 @@ namespace iRoloDex.Data
         {
             return new ApplicationDbContext();
 
-
         }
 
+        public DbSet<Owner> Owners { get; set; }
         public DbSet<Household> Households { get; set; }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Relationship> Relationships { get; set; }
-        public DbSet<Owner> Owners { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
