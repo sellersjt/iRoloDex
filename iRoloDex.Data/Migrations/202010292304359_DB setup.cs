@@ -115,7 +115,7 @@
                     })
                 .PrimaryKey(t => t.PersonId)
                 .ForeignKey("dbo.Household", t => t.HouseholdId, cascadeDelete: false)
-                .ForeignKey("dbo.Owner", t => t.OwnerId, cascadeDelete: true)
+                .ForeignKey("dbo.Owner", t => t.OwnerId, cascadeDelete: false)
                 .ForeignKey("dbo.Relationship", t => t.RelationshipId, cascadeDelete: false)
                 .Index(t => t.HouseholdId)
                 .Index(t => t.OwnerId)
