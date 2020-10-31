@@ -61,7 +61,6 @@
     <Compile Include="Household\HouseholdDetail.cs" />
     <Compile Include="Household\HouseholdEdit.cs" />
     <Compile Include="Household\HouseholdListItem.cs" />
-    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

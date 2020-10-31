@@ -13,6 +13,7 @@ namespace iRoloDex.Data.Entities
     {
         [Key]
         public int HouseholdId { get; set; }
+        public virtual ICollection<Person> Persons { get; set; }
 
         [Required]
         public string Street { get; set; }
@@ -27,7 +28,7 @@ namespace iRoloDex.Data.Entities
         public string Zip { get; set; }
 
         [ForeignKey(nameof(Owner))]
-        public int OwnerId { get; set; }
+        public int? OwnerId { get; set; }
         public virtual Owner Owner { get; set; }
 
         public Household()
@@ -36,6 +37,6 @@ namespace iRoloDex.Data.Entities
         }
         public virtual ICollection<ApplicationUser> HouseholdViewers { get; set; }
 
-        public virtual ICollection<Person> Persons { get; set; } = new LinkedList<Person>();
+        //public virtual ICollection<Person> Persons { get; set; } = new List<Person>();
     }
 }
