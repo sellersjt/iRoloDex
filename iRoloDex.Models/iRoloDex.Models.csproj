@@ -57,6 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Owner\OwnerDetail.cs" />
+    <Compile Include="Owner\OwnerList.cs" />
+    <Compile Include="Owner\OwnerUpdate.cs" />
+    <Compile Include="Owner\OwnerCreate.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
