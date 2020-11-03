@@ -1,4 +1,5 @@
 ﻿using Microsoft.Owin.Security.OAuth;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -12,9 +13,6 @@ namespace iRoloDex.Data.Entities
         [Key]
         public int PersonId { get; set; }
 
-        [ForeignKey (nameof(Household))]
-        public int? HouseholdId{ get; set; }
-        public virtual Household Household { get; set; }
         [Required]
         public string FirstName { get; set; }
         [Required]
@@ -25,6 +23,10 @@ namespace iRoloDex.Data.Entities
         [ForeignKey (nameof(Owner))]
         public int? OwnerId { get; set; }
         public virtual Owner Owner { get; set; }
+      
+        [ForeignKey (nameof(Household))]
+        public int HouseholdId { get; set; }
+        public virtual Household Household { get; set; }
 
         [ForeignKey (nameof(Relationship))]
         public int RelationshipId { get; set; }

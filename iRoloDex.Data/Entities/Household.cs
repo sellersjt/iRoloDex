@@ -15,6 +15,7 @@ namespace iRoloDex.Data.Entities
     {
         [Key]
         public int HouseholdId { get; set; }
+        public virtual ICollection<Person> Persons { get; set; }
 
         [Required]
         public string Street { get; set; }

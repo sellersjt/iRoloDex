@@ -1,13 +1,9 @@
-﻿using iRoloDex.Data;
+using iRoloDex.Data;
 using iRoloDex.Data.Entities;
-using iRoloDex.Models;
-using iRoloDex.Models.OwnerModels;
+using iRoloDex.Models.Owner;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace iRoloDex.Services
 {
@@ -53,26 +49,27 @@ namespace iRoloDex.Services
         }
 
         public IEnumerable<OwnerList> GetOwners()
-        {
-            using (var ctx = new ApplicationDbContext())
             {
-                var query =
-                    ctx
-                        .Owners
-                        .Where(e => e.UserId == _userId)
-                        .Select(
-                            e =>
-                                new OwnerList
-                                {
-                                    OwnerId = e.OwnerId,
-                                    Name = e.Name,
-                                    Email = e.Email
-                                }
-                        );
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var query =
+                        ctx
+                            .Owners
+                            .Where(e => e.UserId == _userId)
+                            .Select(
+                                e =>
+                                    new OwnerList
+                                    {
+                                        UserId = e.UserId,
+                                        OwnerId = e.OwnerId,
+                                        Name = e.Name,
+                                        Email = e.Email
+                                    }
+                            );
 
-                return query.ToArray();
+                    return query.ToArray();
+                }
             }
-        }
 
         public OwnerDetail GetOwnerById(int ownerId)
         {

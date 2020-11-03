@@ -1,10 +1,7 @@
-﻿using iRoloDex.Data.Entities;
+using iRoloDex.Models.Owner;
 using iRoloDex.Services;
 using Microsoft.AspNet.Identity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
 
 namespace iRoloDex.WebAPI.Controllers
@@ -19,14 +16,45 @@ namespace iRoloDex.WebAPI.Controllers
             return ownerService;
         }
 
-        public IHttpActionResult Get()
+        [HttpPost]
+        public IHttpActionResult CreateOwner(OwnerCreate owner)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            OwnerService ownerService = CreateOwnerService();
+
+            if (!ownerService.CreateOwner(owner))
+                return InternalServerError();
+
+            return Ok();
+        }
+
+        [HttpPut]
+        public IHttpActionResult UpdateOwner(OwnerUpdate owner)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            OwnerService ownerService = CreateOwnerService();
+
+            if (!ownerService.UpdateOwner(owner))
+                return InternalServerError();
+
+            return Ok();
+        }
+
+        [HttpGet]
+        public IHttpActionResult GetOwners()
         {
             OwnerService ownerService = CreateOwnerService();
             var owners = ownerService.GetOwners();
             return Ok(owners);
         }
 
-        public IHttpActionResult GetOwners(int id)
+        [HttpGet]
+        [Route("{id}")]
+        public IHttpActionResult GetOwnerById(int id)
         {
             OwnerService ownerService = CreateOwnerService();
             var owner = ownerService.GetOwnerById(id);

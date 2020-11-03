@@ -5,18 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iRoloDex.Data.Entities
+namespace iRoloDex.Models
 {
-    public class Relationship
+    public class RelationshipListItem
     {
-        [Key]
         public int RelationshipId { get; set; }
-        [Required]
-        public string Name { get; set; }
         public string RelationshipType { get; set; }
-        [Required]
+        [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
-        public DateTimeOffset ModifiedUtc { get; set; }
-        public virtual ICollection<Person> Persons { get; set; }
     }
 }
