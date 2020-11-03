@@ -1,13 +1,9 @@
 ﻿using iRoloDex.Data;
 using iRoloDex.Data.Entities;
-using iRoloDex.Models;
 using iRoloDex.Models.Owner;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace iRoloDex.Services
 {
@@ -64,6 +60,7 @@ namespace iRoloDex.Services
                                 e =>
                                     new OwnerList
                                     {
+                                        UserId = e.UserId,
                                         OwnerId = e.OwnerId,
                                         Name = e.Name,
                                         Email = e.Email
@@ -104,6 +101,24 @@ namespace iRoloDex.Services
                 ctx.Owners.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public OwnerDetail GetOwnerId()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Owners
+                        .Single(e => e.UserId == _userId);
+                return
+                    new OwnerDetail
+                    {
+                        OwnerId = entity.OwnerId,
+                        Name = entity.Name,
+                        Email = entity.Email
+                    };
             }
         }
     }
