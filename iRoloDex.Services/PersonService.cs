@@ -1,6 +1,6 @@
 ﻿using iRoloDex.Data;
 using iRoloDex.Data.Entities;
-using iRoloDex.Models.Person;
+using iRoloDex.Models.PersonModels;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;

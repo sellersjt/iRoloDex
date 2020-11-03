@@ -128,9 +128,6 @@
     <Compile Include="Migrations\202011030042404_add icollection to Relationship.cs" />
     <Compile Include="Migrations\202011030042404_add icollection to Relationship.designer.cs">
       <DependentUpon>202011030042404_add icollection to Relationship.cs</DependentUpon>
-    <Compile Include="Migrations\202011022314461_InitialMigration.cs" />
-    <Compile Include="Migrations\202011022314461_InitialMigration.designer.cs">
-      <DependentUpon>202011022314461_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -167,11 +164,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011022314461_InitialMigration.resx">
-      <DependentUpon>202011022314461_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

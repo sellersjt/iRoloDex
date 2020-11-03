@@ -78,7 +78,7 @@
       <Name>iRoloDex.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\iRoloDex.Models\iRoloDex.Models.csproj">
-      <Project>{38F3261D-0225-4849-887E-EC86B302A33B}</Project>
+      <Project>{38f3261d-0225-4849-887e-ec86b302a33b}</Project>
       <Name>iRoloDex.Models</Name>
     </ProjectReference>
   </ItemGroup>

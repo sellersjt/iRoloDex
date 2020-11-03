@@ -1,4 +1,5 @@
 ﻿using iRoloDex.Models;
+using iRoloDex.Models.RelationshipModels;
 using iRoloDex.Services;
 using Microsoft.AspNet.Identity;
 using System;

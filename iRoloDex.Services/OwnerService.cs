@@ -1,6 +1,6 @@
 using iRoloDex.Data;
 using iRoloDex.Data.Entities;
-using iRoloDex.Models.Owner;
+using iRoloDex.Models.OwnerModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

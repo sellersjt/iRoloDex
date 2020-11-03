@@ -1,6 +1,5 @@
 ﻿using iRoloDex.Data;
 using iRoloDex.Data.Entities;
-using iRoloDex.Data.Migrations;
 using iRoloDex.Models.HouseholdModels;
 using System;
 using System.Collections.Generic;
