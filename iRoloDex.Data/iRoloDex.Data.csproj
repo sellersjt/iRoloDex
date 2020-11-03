@@ -92,13 +92,9 @@
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Entities\Owner.cs" />
     <Compile Include="Entities\Person.cs" />
-    <Compile Include="Migrations\202010300029084_firstMigration.cs" />
-    <Compile Include="Migrations\202010300029084_firstMigration.designer.cs">
-      <DependentUpon>202010300029084_firstMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010311314190_getOwnerById.cs" />
-    <Compile Include="Migrations\202010311314190_getOwnerById.designer.cs">
-      <DependentUpon>202010311314190_getOwnerById.cs</DependentUpon>
+    <Compile Include="Migrations\202011022314461_InitialMigration.cs" />
+    <Compile Include="Migrations\202011022314461_InitialMigration.designer.cs">
+      <DependentUpon>202011022314461_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,11 +104,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010300029084_firstMigration.resx">
-      <DependentUpon>202010300029084_firstMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010311314190_getOwnerById.resx">
-      <DependentUpon>202010311314190_getOwnerById.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011022314461_InitialMigration.resx">
+      <DependentUpon>202011022314461_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
