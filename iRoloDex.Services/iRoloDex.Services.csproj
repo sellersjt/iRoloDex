@@ -58,11 +58,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OwnerService.cs" />
+    <Compile Include="PersonService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iRoloDex.Data\iRoloDex.Data.csproj">
+      <Project>{eb2c2ca9-462c-4216-800b-4267a98d5bc8}</Project>
+      <Name>iRoloDex.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iRoloDex.Models\iRoloDex.Models.csproj">
+      <Project>{38f3261d-0225-4849-887e-ec86b302a33b}</Project>
+      <Name>iRoloDex.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
