@@ -57,10 +57,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Household\HouseholdCreate.cs" />
-    <Compile Include="Household\HouseholdDetail.cs" />
-    <Compile Include="Household\HouseholdEdit.cs" />
-    <Compile Include="Household\HouseholdListItem.cs" />
+    <Compile Include="HouseholdModels\HouseholdCreate.cs" />
+    <Compile Include="HouseholdModels\HouseholdDetail.cs" />
+    <Compile Include="HouseholdModels\HouseholdEdit.cs" />
+    <Compile Include="HouseholdModels\HouseholdListItem.cs" />
+    <Compile Include="OwnerModels\OwnerCreate.cs" />
+    <Compile Include="OwnerModels\OwnerDetail.cs" />
+    <Compile Include="OwnerModels\OwnerList.cs" />
+    <Compile Include="OwnerModels\OwnerUpdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

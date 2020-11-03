@@ -13,5 +13,7 @@ namespace iRoloDex.Data.Entities
         public int RelationshipId { get; set; }
         [Required]
         public string Name { get; set; }
+
+        public virtual ICollection<Person> Persons { get; set; }
     }
 }

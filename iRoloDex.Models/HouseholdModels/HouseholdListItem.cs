@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iRoloDex.Models.Household
+namespace iRoloDex.Models.HouseholdModels
 {
     public class HouseholdListItem
     {

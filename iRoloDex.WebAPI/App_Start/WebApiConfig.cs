@@ -17,6 +17,11 @@ namespace iRoloDex.WebAPI
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
+
+            //added for circular reference --jonnie
+            config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling
+                               = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 

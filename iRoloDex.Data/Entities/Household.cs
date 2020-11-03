@@ -1,9 +1,11 @@
 ﻿using Microsoft.Owin.Security.OAuth;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,7 +15,6 @@ namespace iRoloDex.Data.Entities
     {
         [Key]
         public int HouseholdId { get; set; }
-        public virtual ICollection<Person> Persons { get; set; }
 
         [Required]
         public string Street { get; set; }
@@ -31,12 +32,15 @@ namespace iRoloDex.Data.Entities
         public int? OwnerId { get; set; }
         public virtual Owner Owner { get; set; }
 
-        public Household()
-        {
-            this.HouseholdViewers = new HashSet<ApplicationUser>();
-        }
-        public virtual ICollection<ApplicationUser> HouseholdViewers { get; set; }
+        //public Household()
+        //{
+        //    this.HouseholdViewers = new HashSet<ApplicationUser>();
+        //}
+        //public virtual ICollection<ApplicationUser> HouseholdViewers { get; set; }
 
-        //public virtual ICollection<Person> Persons { get; set; } = new List<Person>();
+        //[JsonIgnore]
+        //[IgnoreDataMember]
+        //public virtual ICollection<Person> Persons { get; set; }
+        public virtual ICollection<Person> Persons { get; set; } = new List<Person>();
     }
 }

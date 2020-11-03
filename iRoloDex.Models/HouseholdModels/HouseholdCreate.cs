@@ -1,20 +1,26 @@
-﻿using iRoloDex.Data.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iRoloDex.Models.Household
+namespace iRoloDex.Models.HouseholdModels
 {
-    public class HouseholdDetail
+    public class HouseholdCreate
     {
-        public int HouseholdId { get; set; }
+        [Required]
         public string Street { get; set; }
+
+        [Required]
         public string City { get; set; }
+
+        [Required]
         public string State { get; set; }
+
+        [Required]
         public string Zip { get; set; }
-        public Owner Owner { get; set; }
-        public ICollection<Person> Persons { get; set; }
+
+        public int OwnerId { get; set; }
     }
 }

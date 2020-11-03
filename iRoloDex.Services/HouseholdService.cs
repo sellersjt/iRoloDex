@@ -1,7 +1,7 @@
 ﻿using iRoloDex.Data;
 using iRoloDex.Data.Entities;
 using iRoloDex.Data.Migrations;
-using iRoloDex.Models.Household;
+using iRoloDex.Models.HouseholdModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -51,11 +51,9 @@ namespace iRoloDex.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
-                    //ctx
-                    //    .Households
-                    //    .Where(e => e.OwnerId == _ownerId)
-                    ctx.Households.Include(e => e.Persons).Where(e => e.OwnerId == _ownerId)
-                .Select(
+                        //ctx.Households.Where(e => e.OwnerId == _ownerId)
+                        ctx.Households.Include(e => e.Persons.Select(r => r.Relationships)).Where(e => e.OwnerId == _ownerId)
+                        .Select(
                     e =>
                         new HouseholdListItem
                         {
@@ -65,7 +63,7 @@ namespace iRoloDex.Services
                             State = e.State,
                             Zip = e.Zip,
                             Owner = e.Owner,
-                            Persons = e.Persons 
+                            //Persons = e.Persons
                         }
                         
                 );
@@ -82,8 +80,11 @@ namespace iRoloDex.Services
                 {
                     var entity =
                         ctx
+                            //.Households
                             .Households.Include(e => e.Persons)
                             .Single(e => e.HouseholdId == id && e.OwnerId == _ownerId);
+                            //.Where(e => e.HouseholdId == id && e.OwnerId == _ownerId)
+                            //.FirstOrDefault();
                     return
                         new HouseholdDetail
                         {
@@ -93,7 +94,7 @@ namespace iRoloDex.Services
                             State = entity.State,
                             Zip = entity.Zip,
                             Owner = entity.Owner,
-                            Persons = entity.Persons
+                            //Persons = entity.Persons
                         };
                 }
             }

@@ -15,13 +15,13 @@ namespace iRoloDex.Data
     public class ApplicationUser : IdentityUser
     {
         // start iRoloDex db code
-        public ApplicationUser()
-        {
-            this.HouseholdViewers = new HashSet<Household>();
-            this.PersonViewers = new HashSet<Person>();
-        }
-        public virtual ICollection<Household> HouseholdViewers { get; set; }
-        public virtual ICollection<Person> PersonViewers { get; set; }
+        //public ApplicationUser()
+        //{
+        //    this.HouseholdViewers = new HashSet<Household>();
+        //    this.PersonViewers = new HashSet<Person>();
+        //}
+        //public virtual ICollection<Household> HouseholdViewers { get; set; }
+        //public virtual ICollection<Person> PersonViewers { get; set; }
         // end iRoloDex db code
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)

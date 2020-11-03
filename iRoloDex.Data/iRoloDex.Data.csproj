@@ -73,6 +73,7 @@
     <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
@@ -112,9 +113,21 @@
     <Compile Include="Migrations\202010310143582_test.designer.cs">
       <DependentUpon>202010310143582_test.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010310245405_test person.cs" />
-    <Compile Include="Migrations\202010310245405_test person.designer.cs">
-      <DependentUpon>202010310245405_test person.cs</DependentUpon>
+    <Compile Include="Migrations\202010311947328_test owner.cs" />
+    <Compile Include="Migrations\202010311947328_test owner.designer.cs">
+      <DependentUpon>202010311947328_test owner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011022341100_remove viewer tables.cs" />
+    <Compile Include="Migrations\202011022341100_remove viewer tables.designer.cs">
+      <DependentUpon>202011022341100_remove viewer tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011030020233_add icollections to person.cs" />
+    <Compile Include="Migrations\202011030020233_add icollections to person.designer.cs">
+      <DependentUpon>202011030020233_add icollections to person.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011030042404_add icollection to Relationship.cs" />
+    <Compile Include="Migrations\202011030042404_add icollection to Relationship.designer.cs">
+      <DependentUpon>202011030042404_add icollection to Relationship.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -135,8 +148,17 @@
     <EmbeddedResource Include="Migrations\202010310143582_test.resx">
       <DependentUpon>202010310143582_test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010310245405_test person.resx">
-      <DependentUpon>202010310245405_test person.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010311947328_test owner.resx">
+      <DependentUpon>202010311947328_test owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011022341100_remove viewer tables.resx">
+      <DependentUpon>202011022341100_remove viewer tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011030020233_add icollections to person.resx">
+      <DependentUpon>202011030020233_add icollections to person.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011030042404_add icollection to Relationship.resx">
+      <DependentUpon>202011030042404_add icollection to Relationship.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

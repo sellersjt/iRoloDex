@@ -1,5 +1,5 @@
 ﻿using iRoloDex.Data.Entities;
-using iRoloDex.Models.Household;
+using iRoloDex.Models.HouseholdModels;
 using iRoloDex.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -18,9 +18,9 @@ namespace iRoloDex.WebAPI.Controllers
     {
         private HouseholdService CreateHouseholdService()
         {
-            //var userId = Guid.Parse(User.Identity.GetUserId());
-            int ownerId = 1;
-            var householdService = new HouseholdService(ownerId);
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var ownerService = new OwnerService(userId);
+            var householdService = new HouseholdService(ownerService.GetOwnerId().OwnerId);
             return householdService;
         }
 
