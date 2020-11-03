@@ -21,6 +21,7 @@ namespace iRoloDex.Services
             var entity =
                 new Owner()
                 {
+                    UserId = _userId,
                     Name = model.Name,
                     Email = model.Email
                 };
@@ -111,7 +112,8 @@ namespace iRoloDex.Services
                 var entity =
                     ctx
                         .Owners
-                        .Single(e => e.UserId == _userId);
+                        //.Single(e => e.UserId == _userId);
+                        .Where(e => e.UserId == _userId).FirstOrDefault();
                 return
                     new OwnerDetail
                     {

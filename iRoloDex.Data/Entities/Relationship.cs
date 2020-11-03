@@ -17,6 +17,6 @@ namespace iRoloDex.Data.Entities
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset ModifiedUtc { get; set; }
-        public virtual ICollection<Person> Persons { get; set; }
+        //public virtual ICollection<Person> Persons { get; set; }
     }
 }

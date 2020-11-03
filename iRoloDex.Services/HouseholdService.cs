@@ -142,7 +142,10 @@ namespace iRoloDex.Services
                         ctx
                             .Households
                             .Single(e => e.HouseholdId == householdId && e.OwnerId == _ownerId);
-
+                    //if (entity == null)
+                    //{
+                    //    return 2;
+                    //}
                     ctx.Households.Remove(entity);
 
                     if (ctx.SaveChanges() == 1)

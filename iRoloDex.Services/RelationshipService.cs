@@ -23,6 +23,7 @@ namespace iRoloDex.Services
         {
             var entity = new Relationship()
             {
+                Name = model.Name,
                 RelationshipType = model.RelationshipType
             };
 
@@ -43,6 +44,7 @@ namespace iRoloDex.Services
                     .Select(e => new RelationshipListItem
                     {
                         RelationshipId = e.RelationshipId,
+                        Name = e.Name,
                         RelationshipType = e.RelationshipType,
                         CreatedUtc = e.CreatedUtc
                     });
@@ -60,6 +62,7 @@ namespace iRoloDex.Services
                 return new RelationshipDetail
                 {
                     RelationshipId = entity.RelationshipId,
+                    Name = entity.Name,
                     RelationshipType = entity.RelationshipType
                 };
             }

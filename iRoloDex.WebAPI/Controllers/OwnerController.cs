@@ -7,6 +7,7 @@ using System.Web.Http;
 namespace iRoloDex.WebAPI.Controllers
 {
     [Authorize]
+    [RoutePrefix("api/Owner")]
     public class OwnerController : ApiController
     {
         private OwnerService CreateOwnerService()
@@ -31,6 +32,7 @@ namespace iRoloDex.WebAPI.Controllers
         }
 
         [HttpPut]
+        [Route("{id}")]
         public IHttpActionResult UpdateOwner(OwnerUpdate owner)
         {
             if (!ModelState.IsValid)

@@ -26,7 +26,9 @@ namespace iRoloDex.Services
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 PhoneNumber = model.PhoneNumber,
-                Email = model.Email
+                Email = model.Email,
+                HouseholdId = model.HouseholdId,
+                RelationshipId = model.RelationshipId
             };
 
             using (var ctx = new ApplicationDbContext())
@@ -54,7 +56,10 @@ namespace iRoloDex.Services
                                     PhoneNumber = e.PhoneNumber,
                                     Email = e.Email,
                                     RelationshipId = e.RelationshipId,
-                                    HouseholdId = e.HouseholdId
+                                    OwnerId = e.OwnerId,
+                                    HouseholdId = e.HouseholdId,
+                                    //Household = e.Household,
+                                    Relationship = e.Relationship
                                 }
                 );
                 return query.ToArray();
@@ -78,7 +83,8 @@ namespace iRoloDex.Services
                         PhoneNumber = entity.PhoneNumber,
                         Email = entity.Email,
                         RelationshipId = entity.RelationshipId,
-                        HouseholdId = entity.HouseholdId
+                        HouseholdId = entity.HouseholdId,
+                        OwnerId = entity.OwnerId
                     };
             }
         }
