@@ -1,4 +1,4 @@
-﻿using iRoloDex.Models.Owner;
+using iRoloDex.Models.Owner;
 using iRoloDex.Services;
 using Microsoft.AspNet.Identity;
 using System;

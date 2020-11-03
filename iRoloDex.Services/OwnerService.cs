@@ -1,4 +1,4 @@
-﻿using iRoloDex.Data;
+using iRoloDex.Data;
 using iRoloDex.Data.Entities;
 using iRoloDex.Models.Owner;
 using System;

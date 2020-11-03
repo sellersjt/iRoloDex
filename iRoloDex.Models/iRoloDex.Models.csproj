@@ -57,6 +57,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HouseholdModels\HouseholdCreate.cs" />
+    <Compile Include="HouseholdModels\HouseholdDetail.cs" />
+    <Compile Include="HouseholdModels\HouseholdEdit.cs" />
+    <Compile Include="HouseholdModels\HouseholdListItem.cs" />
+    <Compile Include="OwnerModels\OwnerCreate.cs" />
+    <Compile Include="OwnerModels\OwnerDetail.cs" />
+    <Compile Include="OwnerModels\OwnerList.cs" />
+    <Compile Include="OwnerModels\OwnerUpdate.cs" />
     <Compile Include="Person\PersonCreate.cs" />
     <Compile Include="Person\PersonListItem.cs" />
     <Compile Include="Owner\OwnerDetail.cs" />
@@ -73,6 +81,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iRoloDex.Data\iRoloDex.Data.csproj">
+      <Project>{EB2C2CA9-462C-4216-800B-4267A98D5BC8}</Project>
+      <Name>iRoloDex.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
