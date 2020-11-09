@@ -12,7 +12,5 @@ namespace iRoloDex.Models.RelationshipModels
         public int RelationshipId { get; set; }
         public string Name { get; set; }
         public string RelationshipType { get; set; }
-        [Display(Name = "Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
     }
 }

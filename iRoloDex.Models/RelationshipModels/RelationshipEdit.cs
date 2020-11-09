@@ -9,6 +9,7 @@ namespace iRoloDex.Models.RelationshipModels
     public class RelationshipEdit
     {
         public int RelationshipId { get; set; }
+        public string Name { get; set; }
         public string RelationshipType { get; set; }
     }
 }
