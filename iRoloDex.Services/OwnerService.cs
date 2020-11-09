@@ -49,7 +49,7 @@ namespace iRoloDex.Services
             }
         }
 
-        public IEnumerable<OwnerList> GetOwners()
+        public IEnumerable<OwnerList> Get()
             {
                 using (var ctx = new ApplicationDbContext())
                 {
@@ -97,7 +97,7 @@ namespace iRoloDex.Services
                 var entity =
                     ctx
                         .Owners
-                        .Single(e => e.OwnerId == ownerId);
+                        .Single(e => e.OwnerId == ownerId && e.UserId == _userId);
 
                 ctx.Owners.Remove(entity);
 
