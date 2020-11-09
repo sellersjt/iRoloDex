@@ -129,10 +129,6 @@
     <Compile Include="Migrations\202011030042404_add icollection to Relationship.designer.cs">
       <DependentUpon>202011030042404_add icollection to Relationship.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011030322397_merge updates.cs" />
-    <Compile Include="Migrations\202011030322397_merge updates.designer.cs">
-      <DependentUpon>202011030322397_merge updates.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -163,9 +159,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011030042404_add icollection to Relationship.resx">
       <DependentUpon>202011030042404_add icollection to Relationship.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011030322397_merge updates.resx">
-      <DependentUpon>202011030322397_merge updates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

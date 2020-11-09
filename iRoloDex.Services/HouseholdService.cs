@@ -1,6 +1,5 @@
 ﻿using iRoloDex.Data;
 using iRoloDex.Data.Entities;
-using iRoloDex.Data.Migrations;
 using iRoloDex.Models.HouseholdModels;
 using System;
 using System.Collections.Generic;
@@ -50,11 +49,12 @@ namespace iRoloDex.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query =
+                        var query =
                         //ctx.Households.Where(e => e.OwnerId == _ownerId)
-                        ctx.Households.Include(e => e.Persons.Select(r => r.Relationships)).Where(e => e.OwnerId == _ownerId)
+                        //ctx.Households.Include(e => e.Persons.Select(r => r.Relationships)).Where(e => e.OwnerId == _ownerId)
+                        ctx.Households.Where(e => e.OwnerId == _ownerId).Include(e => e.Persons)
                         .Select(
-                    e =>
+                        e =>
                         new HouseholdListItem
                         {
                             HouseholdId = e.HouseholdId,
@@ -62,11 +62,10 @@ namespace iRoloDex.Services
                             City = e.City,
                             State = e.State,
                             Zip = e.Zip,
-                            Owner = e.Owner,
+                            Owner = e.Owner
                             //Persons = e.Persons
                         }
-                        
-                );
+                        );
 
                 return query.ToArray();
             }
@@ -83,8 +82,8 @@ namespace iRoloDex.Services
                             //.Households
                             .Households.Include(e => e.Persons)
                             .Single(e => e.HouseholdId == id && e.OwnerId == _ownerId);
-                            //.Where(e => e.HouseholdId == id && e.OwnerId == _ownerId)
-                            //.FirstOrDefault();
+                    //.Where(e => e.HouseholdId == id && e.OwnerId == _ownerId)
+                    //.FirstOrDefault();
                     return
                         new HouseholdDetail
                         {
@@ -143,7 +142,10 @@ namespace iRoloDex.Services
                         ctx
                             .Households
                             .Single(e => e.HouseholdId == householdId && e.OwnerId == _ownerId);
-
+                    //if (entity == null)
+                    //{
+                    //    return 2;
+                    //}
                     ctx.Households.Remove(entity);
 
                     if (ctx.SaveChanges() == 1)

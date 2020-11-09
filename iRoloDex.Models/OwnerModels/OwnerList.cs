@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace iRoloDex.Models.OwnerModels
 {
     public class OwnerList
     {
+        [Display(Name = "User Id")]
+        public Guid UserId { get; set; }
         [Display(Name = "Owner Id")]
         public int OwnerId { get; set; }
         [Display(Name = "Name")]

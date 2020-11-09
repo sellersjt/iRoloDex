@@ -1,5 +1,5 @@
 ﻿using iRoloDex.Data;
-using iRoloDex.Models.Person;
+using iRoloDex.Models.PersonModels;
 using iRoloDex.Services;
 using Microsoft.AspNet.Identity;
 using System;

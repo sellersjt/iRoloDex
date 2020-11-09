@@ -1,4 +1,5 @@
 ﻿using iRoloDex.Models;
+using iRoloDex.Models.RelationshipModels;
 using iRoloDex.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -10,6 +11,7 @@ using System.Web.Http;
 namespace iRoloDex.WebAPI.Controllers
 {
     [Authorize]
+    [RoutePrefix("api/Relationship")]
     public class RelationshipController : ApiController
     {
         [HttpGet]
@@ -59,6 +61,7 @@ namespace iRoloDex.WebAPI.Controllers
         }
 
         [HttpDelete]
+        [Route("{id}")]
         public IHttpActionResult Delete(int id)
         {
             var service = CreateRelationshipService();

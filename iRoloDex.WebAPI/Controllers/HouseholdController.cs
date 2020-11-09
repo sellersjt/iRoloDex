@@ -1,5 +1,4 @@
-﻿using iRoloDex.Data.Entities;
-using iRoloDex.Models.HouseholdModels;
+﻿using iRoloDex.Models.HouseholdModels;
 using iRoloDex.Services;
 using Microsoft.AspNet.Identity;
 using System;

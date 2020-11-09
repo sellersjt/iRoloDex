@@ -1,6 +1,7 @@
 ﻿using iRoloDex.Data;
 using iRoloDex.Data.Entities;
 using iRoloDex.Models;
+using iRoloDex.Models.RelationshipModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace iRoloDex.Services
         {
             var entity = new Relationship()
             {
+                Name = model.Name,
                 RelationshipType = model.RelationshipType
             };
 
@@ -38,12 +40,12 @@ namespace iRoloDex.Services
             {
                 var query = ctx
                     .Relationships
-                    .Where(e => e.OwnerId == _userId)
+                    //.Where(e => e.OwnerId == _userId)
                     .Select(e => new RelationshipListItem
                     {
                         RelationshipId = e.RelationshipId,
-                        RelationshipType = e.RelationshipType,
-                        CreatedUtc = e.CreatedUtc
+                        Name = e.Name,
+                        RelationshipType = e.RelationshipType
                     });
                 return query.ToArray();
             }
@@ -55,10 +57,11 @@ namespace iRoloDex.Services
             {
                 var entity = ctx
                     .Relationships
-                    .Single(e => e.RelationshipId == id && e.OwnerId == _userId);
+                    .Single(e => e.RelationshipId == id );
                 return new RelationshipDetail
                 {
                     RelationshipId = entity.RelationshipId,
+                    Name = entity.Name,
                     RelationshipType = entity.RelationshipType
                 };
             }
@@ -70,9 +73,10 @@ namespace iRoloDex.Services
             {
                 var entity = ctx
                     .Relationships
-                    .Single(e => e.RelationshipId == model.RelationshipId && e.OwnerId == _userId);
+                    .Single(e => e.RelationshipId == model.RelationshipId );
 
                 entity.RelationshipId = model.RelationshipId;
+                entity.Name = model.Name;
                 entity.RelationshipType = model.RelationshipType;
                 entity.ModifiedUtc = DateTimeOffset.Now;
 
@@ -86,7 +90,7 @@ namespace iRoloDex.Services
             {
                 var entity = ctx
                     .Relationships
-                    .Single(e => e.RelationshipId == relationshipId && e.OwnerId == _userId);
+                    .Single(e => e.RelationshipId == relationshipId );
 
                 ctx.Relationships.Remove(entity);
 

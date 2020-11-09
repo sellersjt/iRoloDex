@@ -1,6 +1,6 @@
 using iRoloDex.Data;
 using iRoloDex.Data.Entities;
-using iRoloDex.Models.Owner;
+using iRoloDex.Models.OwnerModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +21,7 @@ namespace iRoloDex.Services
             var entity =
                 new Owner()
                 {
+                    UserId = _userId,
                     Name = model.Name,
                     Email = model.Email
                 };
@@ -48,7 +49,7 @@ namespace iRoloDex.Services
             }
         }
 
-        public IEnumerable<OwnerList> GetOwners()
+        public IEnumerable<OwnerList> Get()
             {
                 using (var ctx = new ApplicationDbContext())
                 {
@@ -96,7 +97,7 @@ namespace iRoloDex.Services
                 var entity =
                     ctx
                         .Owners
-                        .Single(e => e.OwnerId == ownerId);
+                        .Single(e => e.OwnerId == ownerId && e.UserId == _userId);
 
                 ctx.Owners.Remove(entity);
 
@@ -111,7 +112,8 @@ namespace iRoloDex.Services
                 var entity =
                     ctx
                         .Owners
-                        .Single(e => e.UserId == _userId);
+                        //.Single(e => e.UserId == _userId);
+                        .Where(e => e.UserId == _userId).FirstOrDefault();
                 return
                     new OwnerDetail
                     {
