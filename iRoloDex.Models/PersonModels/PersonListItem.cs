@@ -22,6 +22,6 @@ namespace iRoloDex.Models.PersonModels
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
         public Relationship Relationship { get; set; }
-        //public  Household Household { get; set; }
+        public Household Household { get; set; }
     }
 }
