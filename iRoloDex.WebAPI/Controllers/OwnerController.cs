@@ -26,6 +26,11 @@ namespace iRoloDex.WebAPI.Controllers
             return ownerService;
         }
 
+        /// <summary>
+        /// Creates a New Owner
+        /// </summary>
+        /// <param name="owner">The owner requires a string of characters.</param>
+        /// <returns></returns>
         [HttpPost]
         public IHttpActionResult CreateOwner(OwnerCreate owner)
         {
@@ -40,6 +45,11 @@ namespace iRoloDex.WebAPI.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Updates an Owner's Info
+        /// </summary>
+        /// <param name="owner">Requires Owner Id, Name, and Email Address</param>
+        /// <returns>Called by passing the Owner's Id and requires a name and an email address.</returns>
         [HttpPut]
         [Route("{id}")]
         public IHttpActionResult UpdateOwner(OwnerUpdate owner)
@@ -55,6 +65,10 @@ namespace iRoloDex.WebAPI.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Gets a List of All Owners
+        /// </summary>
+        /// <returns>Returns a list of all owner names and Ids.</returns>
         [HttpGet]
         public IHttpActionResult Get()
         {
@@ -63,6 +77,11 @@ namespace iRoloDex.WebAPI.Controllers
             return Ok(owners);
         }
 
+        /// <summary>
+        /// Gets One Owner
+        /// </summary>
+        /// <param name="id">Requires Owner Id</param>
+        /// <returns>Returns the name and email address of one owner.</returns>
         [HttpGet]
         [Route("{id}")]
         public IHttpActionResult GetOwnerById(int id)
@@ -72,6 +91,11 @@ namespace iRoloDex.WebAPI.Controllers
             return Ok(owner);
         }
 
+        /// <summary>
+        /// Deletes an Owner
+        /// </summary>
+        /// <param name="id">Requires Owner Id</param>
+        /// <returns>Deletes one owner by Owner Id.</returns>
         [HttpDelete]
         [Route("{id}")]
         public IHttpActionResult DeleteOwner([FromUri] int id)
