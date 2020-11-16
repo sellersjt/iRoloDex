@@ -1,10 +1,13 @@
 ﻿using iRoloDex.Data;
 using iRoloDex.Data.Entities;
+using iRoloDex.Data.Migrations;
 using iRoloDex.Models.HouseholdModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,10 +16,12 @@ namespace iRoloDex.Services
     public class HouseholdService
     {
         private readonly int _ownerId;
+        private readonly Guid _userId;
 
-        public HouseholdService(int ownerId)
+        public HouseholdService(int ownerId, Guid userId)
         {
             _ownerId = ownerId;
+            _userId = userId;
         }
 
         public bool CreateHousehold(HouseholdCreate model)
@@ -50,9 +55,9 @@ namespace iRoloDex.Services
             using (var ctx = new ApplicationDbContext())
             {
                         var query =
-                        //ctx.Households.Where(e => e.OwnerId == _ownerId)
+                        ctx.Households.Where(e => e.OwnerId == _ownerId)
                         //ctx.Households.Include(e => e.Persons.Select(r => r.Relationships)).Where(e => e.OwnerId == _ownerId)
-                        ctx.Households.Where(e => e.OwnerId == _ownerId).Include(e => e.Persons)
+                        //ctx.Households.Where(e => e.OwnerId == _ownerId).Include(e => e.Persons)
                         .Select(
                         e =>
                         new HouseholdListItem
@@ -79,11 +84,12 @@ namespace iRoloDex.Services
                 {
                     var entity =
                         ctx
-                            //.Households
-                            .Households.Include(e => e.Persons)
+                            .Households
+                            //.Households.Include(e => e.HouseholdViewers)
                             .Single(e => e.HouseholdId == id && e.OwnerId == _ownerId);
-                    //.Where(e => e.HouseholdId == id && e.OwnerId == _ownerId)
-                    //.FirstOrDefault();
+                            //.Single(e => (e.HouseholdId == id && e.OwnerId == _ownerId) || e.HouseholdViewers.Count() > 0);
+                            //.Where(e => e.HouseholdId == id && e.OwnerId == _ownerId)
+                            //.FirstOrDefault();
                     return
                         new HouseholdDetail
                         {

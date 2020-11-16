@@ -20,8 +20,8 @@ namespace iRoloDex.Data
         //    this.HouseholdViewers = new HashSet<Household>();
         //    this.PersonViewers = new HashSet<Person>();
         //}
-        //public virtual ICollection<Household> HouseholdViewers { get; set; }
-        //public virtual ICollection<Person> PersonViewers { get; set; }
+        public virtual ICollection<Household> HouseholdViewers { get; set; }
+        public virtual ICollection<Person> PersonViewers { get; set; }
         // end iRoloDex db code
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
@@ -39,7 +39,7 @@ namespace iRoloDex.Data
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-        
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
@@ -61,6 +61,14 @@ namespace iRoloDex.Data
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
+
+            modelBuilder
+                .Entity<Person>()
+                .HasMany(p => p.PersonViewers); 
+            
+            modelBuilder
+                .Entity<Household>()
+                .HasMany(p => p.HouseholdViewers);
         }
     }
 

@@ -36,7 +36,7 @@ namespace iRoloDex.Data.Entities
         //{
         //    this.HouseholdViewers = new HashSet<ApplicationUser>();
         //}
-        //public virtual ICollection<ApplicationUser> HouseholdViewers { get; set; }
+        public virtual ICollection<ApplicationUser> HouseholdViewers { get; set; }
 
         //[JsonIgnore]
         //[IgnoreDataMember]
