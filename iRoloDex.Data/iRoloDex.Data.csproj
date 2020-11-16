@@ -133,6 +133,10 @@
     <Compile Include="Migrations\202011030322397_merge updates.designer.cs">
       <DependentUpon>202011030322397_merge updates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011100353232_viewers update.cs" />
+    <Compile Include="Migrations\202011100353232_viewers update.designer.cs">
+      <DependentUpon>202011100353232_viewers update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -166,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011030322397_merge updates.resx">
       <DependentUpon>202011030322397_merge updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011100353232_viewers update.resx">
+      <DependentUpon>202011100353232_viewers update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

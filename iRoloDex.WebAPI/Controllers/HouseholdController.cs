@@ -11,6 +11,9 @@ using System.Web.Http;
 
 namespace iRoloDex.WebAPI.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Authorize]
     [RoutePrefix("api/Household")]
     public class HouseholdController : ApiController
@@ -19,11 +22,15 @@ namespace iRoloDex.WebAPI.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var ownerService = new OwnerService(userId);
-            var householdService = new HouseholdService(ownerService.GetOwnerId().OwnerId);
+            var householdService = new HouseholdService(ownerService.GetOwnerId().OwnerId, userId);
             return householdService;
         }
 
         // get  api/Household
+        /// <summary>
+        /// Gets a list of households.
+        /// </summary>
+        /// <returns>Returns a list of households.</returns>
         [HttpGet]
         public IHttpActionResult GetAll()
         {
@@ -32,6 +39,11 @@ namespace iRoloDex.WebAPI.Controllers
             return Ok(households);
         }
 
+        /// <summary>
+        /// Gets a household by id.
+        /// </summary>
+        /// <param name="id">Parameter id requires an integer argument.</param>
+        /// <returns>Returns a specific household by id.</returns>
         // get api/Household/{id}
         [HttpGet]
         [Route("{id}", Name= "GetById")]
@@ -46,7 +58,11 @@ namespace iRoloDex.WebAPI.Controllers
             return Ok(household);
         }
 
-
+        /// <summary>
+        /// Post a household to the database.
+        /// </summary>
+        /// <param name="household"></param>
+        /// <returns></returns>
         // post  api/Household
         [HttpPost]
         public IHttpActionResult Create(HouseholdCreate household)
@@ -65,6 +81,11 @@ namespace iRoloDex.WebAPI.Controllers
             //return CreatedAtRoute("GetById", new { newHousehold.HouseholdId }, newHousehold);
         }
 
+        /// <summary>
+        /// Updates a household.
+        /// </summary>
+        /// <param name="household"></param>
+        /// <returns></returns>
         // put api/Household/{id}
         [HttpPut]
         [Route("{id}")]
@@ -81,6 +102,11 @@ namespace iRoloDex.WebAPI.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Deletes a household by id.
+        /// </summary>
+        /// <param name="id">Parameter id requires an integer argument.</param>
+        /// <returns></returns>
         // delete api/Household/{id}
         [HttpDelete]
         [Route("{id}")]

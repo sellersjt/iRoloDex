@@ -15,9 +15,12 @@ namespace iRoloDex.Data.Entities
 
         [Required]
         public string FirstName { get; set; }
+
         [Required]
         public string LastName { get; set; }
+
         public string PhoneNumber { get; set; }
+
         public string Email { get; set; }
 
         [ForeignKey (nameof(Owner))]
@@ -36,10 +39,10 @@ namespace iRoloDex.Data.Entities
         //{
         //    this.PersonViewers = new HashSet<ApplicationUser>();
         //}
-        //public virtual ICollection<ApplicationUser> PersonViewers { get; set; }
+        public virtual ICollection<ApplicationUser> PersonViewers { get; set; }
 
-        public virtual ICollection<Person> Households { get; set; }
-        public virtual ICollection<Person> Relationships { get; set; }
+        //public virtual ICollection<Person> Households { get; set; }
+        //public virtual ICollection<Person> Relationships { get; set; }
 
     }
 }
