@@ -33,7 +33,7 @@ namespace iRoloDex.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-
+        
         public IEnumerable<RelationshipListItem> GetRelationship()
         {
             using (var ctx = new ApplicationDbContext())
