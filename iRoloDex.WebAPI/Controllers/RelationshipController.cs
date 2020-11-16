@@ -14,6 +14,11 @@ namespace iRoloDex.WebAPI.Controllers
     [RoutePrefix("api/Relationship")]
     public class RelationshipController : ApiController
     {
+        /// <summary>
+        /// Returns all available relationships. 
+        /// </summary>
+        /// <param name="id">The ID requires an integer argument.</param>
+        /// <returns>Returns all available relationships.</returns>
         [HttpGet]
         public IHttpActionResult Get()
         {
@@ -24,6 +29,11 @@ namespace iRoloDex.WebAPI.Controllers
             return Ok(relationships);
         }
 
+        /// <summary>
+        /// Returns Relationship by the RelationshipId 
+        /// </summary>
+        /// <param name="id">The ID requires an integer argument.</param>
+        /// <returns>Returns relationship by ID.</returns>
         [HttpGet]
         [Route("{id}")]
         public IHttpActionResult Get(int id)
@@ -35,6 +45,11 @@ namespace iRoloDex.WebAPI.Controllers
             return Ok(relationship);
         }
 
+        /// <summary>
+        /// Creates new Relationship
+        /// </summary>
+        /// <param name="id">The ID requires an integer argument.</param>
+        /// <returns>Creates new relationship.</returns>
         [HttpPost]
         public IHttpActionResult Post(RelationshipCreate relationship)
         {
@@ -46,6 +61,11 @@ namespace iRoloDex.WebAPI.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Edits Relationship by the RelationshipId 
+        /// </summary>
+        /// <param name="id">The ID requires an integer argument.</param>
+        /// <returns>Edits relationship by ID.</returns>
         [HttpPut]
         public IHttpActionResult Put(RelationshipEdit relationship)
         {
@@ -60,6 +80,11 @@ namespace iRoloDex.WebAPI.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Deletes Relationship by the RelationshipId 
+        /// </summary>
+        /// <param name="id">The ID requires an integer argument.</param>
+        /// <returns>Deletes relationship by ID.</returns>
         [HttpDelete]
         [Route("{id}")]
         public IHttpActionResult Delete(int id)
