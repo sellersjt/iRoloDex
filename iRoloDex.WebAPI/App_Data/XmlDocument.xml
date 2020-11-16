@@ -514,7 +514,43 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
-
+        <member name="T:iRoloDex.WebAPI.Controllers.HouseholdController">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:iRoloDex.WebAPI.Controllers.HouseholdController.GetAll">
+            <summary>
+            Gets a list of households.
+            </summary>
+            <returns>Returns a list of households.</returns>
+        </member>
+        <member name="M:iRoloDex.WebAPI.Controllers.HouseholdController.GetById(System.Int32)">
+            <summary>
+            Gets a household by id.
+            </summary>
+            <param name="id">Parameter id requires an integer argument.</param>
+            <returns>Returns a specific household by id.</returns>
+        </member>
+        <member name="M:iRoloDex.WebAPI.Controllers.HouseholdController.Create(iRoloDex.Models.HouseholdModels.HouseholdCreate)">
+            <summary>
+            Post a household to the database.
+            </summary>
+            <param name="household"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iRoloDex.WebAPI.Controllers.HouseholdController.Update(iRoloDex.Models.HouseholdModels.HouseholdEdit)">
+            <summary>
+            Updates a household.
+            </summary>
+            <param name="household"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iRoloDex.WebAPI.Controllers.HouseholdController.Delete(System.Int32)">
+            <summary>
+            Deletes a household by id.
+            </summary>
+            <param name="id">Parameter id requires an integer argument.</param>
+            <returns></returns>
         <member name="M:iRoloDex.WebAPI.Controllers.OwnerController.CreateOwner(iRoloDex.Models.OwnerModels.OwnerCreate)">
             <summary>
             Creates a New Owner

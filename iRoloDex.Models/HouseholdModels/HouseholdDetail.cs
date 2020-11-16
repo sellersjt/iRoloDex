@@ -15,6 +15,6 @@ namespace iRoloDex.Models.HouseholdModels
         public string State { get; set; }
         public string Zip { get; set; }
         public Owner Owner { get; set; }
-        public ICollection<Person> Persons { get; set; }
+        //public ICollection<Person> Persons { get; set; }
     }
 }

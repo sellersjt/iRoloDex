@@ -97,8 +97,47 @@
     <Compile Include="Migrations\202011130233128_InitialMigration.designer.cs">
       <DependentUpon>202011130233128_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011100353232_viewers update.cs" />
+    <Compile Include="Migrations\202011100353232_viewers update.designer.cs">
+      <DependentUpon>202011100353232_viewers update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202010292304359_DB setup.resx">
+      <DependentUpon>202010292304359_DB setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010302356288_Add HouseholdViewers to ApplicationUser.resx">
+      <DependentUpon>202010302356288_Add HouseholdViewers to ApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010310019351_change.resx">
+      <DependentUpon>202010310019351_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010310135249_Add PersonViewers to ApplicationUser.resx">
+      <DependentUpon>202010310135249_Add PersonViewers to ApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010310143582_test.resx">
+      <DependentUpon>202010310143582_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010311947328_test owner.resx">
+      <DependentUpon>202010311947328_test owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011022341100_remove viewer tables.resx">
+      <DependentUpon>202011022341100_remove viewer tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011030020233_add icollections to person.resx">
+      <DependentUpon>202011030020233_add icollections to person.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011030042404_add icollection to Relationship.resx">
+      <DependentUpon>202011030042404_add icollection to Relationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011030322397_merge updates.resx">
+      <DependentUpon>202011030322397_merge updates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011100353232_viewers update.resx">
+      <DependentUpon>202011100353232_viewers update.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,7 +10,7 @@ namespace iRoloDex.WebAPI.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "iRoloDex API Home Page";
 
             return View();
         }
