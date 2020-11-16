@@ -485,69 +485,8 @@
             <summary>
             Creates a New Owner
             </summary>
-            <param name="owner">The owner requires a string of characters.</param>
+            <param name="owner"></param>
             <returns></returns>
-        </member>
-        <member name="M:iRoloDex.WebAPI.Controllers.OwnerController.UpdateOwner(iRoloDex.Models.OwnerModels.OwnerUpdate)">
-            <summary>
-            Updates an Owner's Info
-            </summary>
-            <param name="owner">Requires Owner Id, Name, and Email Address</param>
-            <returns>Called by passing the Owner's Id and requires a name and an email address.</returns>
-        </member>
-        <member name="M:iRoloDex.WebAPI.Controllers.OwnerController.Get">
-            <summary>
-            Gets a List of All Owners
-            </summary>
-            <returns>Returns a list of all owner names and Ids.</returns>
-        </member>
-        <member name="M:iRoloDex.WebAPI.Controllers.OwnerController.GetOwnerById(System.Int32)">
-            <summary>
-            Gets One Owner
-            </summary>
-            <param name="id">Requires Owner Id</param>
-            <returns>Returns the name and email address of one owner.</returns>
-        </member>
-        <member name="M:iRoloDex.WebAPI.Controllers.OwnerController.DeleteOwner(System.Int32)">
-            <summary>
-            Deletes an Owner
-            </summary>
-            <param name="id">Requires Owner Id</param>
-            <returns>Deletes one owner by Owner Id.</returns>
-        <member name="M:iRoloDex.WebAPI.Controllers.RelationshipController.Get">
-            <summary>
-            Returns all available relationships. 
-            </summary>
-            <param name="id">The ID requires an integer argument.</param>
-            <returns>Returns all available relationships.</returns>
-        </member>
-        <member name="M:iRoloDex.WebAPI.Controllers.RelationshipController.Get(System.Int32)">
-            <summary>
-            Returns Relationship by the RelationshipId 
-            </summary>
-            <param name="id">The ID requires an integer argument.</param>
-            <returns>Returns relationship by ID.</returns>
-        </member>
-        <member name="M:iRoloDex.WebAPI.Controllers.RelationshipController.Post(iRoloDex.Models.RelationshipModels.RelationshipCreate)">
-            <summary>
-            Creates new Relationship
-            </summary>
-            <param name="id">The ID requires an integer argument.</param>
-            <returns>Creates new relationship.</returns>
-        </member>
-        <member name="M:iRoloDex.WebAPI.Controllers.RelationshipController.Put(iRoloDex.Models.RelationshipModels.RelationshipEdit)">
-            <summary>
-            Edits Relationship by the RelationshipId 
-            </summary>
-            <param name="id">The ID requires an integer argument.</param>
-            <returns>Edits relationship by ID.</returns>
-        </member>
-        <member name="M:iRoloDex.WebAPI.Controllers.RelationshipController.Delete(System.Int32)">
-            <summary>
-            Deletes Relationship by the RelationshipId 
-            </summary>
-            <param name="id">The ID requires an integer argument.</param>
-            <returns>Deletes relationship by ID.</returns>
         </member>
     </members>
 </doc>
