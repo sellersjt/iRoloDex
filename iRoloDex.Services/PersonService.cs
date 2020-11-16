@@ -58,7 +58,7 @@ namespace iRoloDex.Services
                                     RelationshipId = e.RelationshipId,
                                     OwnerId = e.OwnerId,
                                     HouseholdId = e.HouseholdId,
-                                    //Household = e.Household,
+                                    Household = e.Household,
                                     Relationship = e.Relationship
                                 }
                 );

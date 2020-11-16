@@ -481,6 +481,39 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:iRoloDex.WebAPI.Controllers.PersonController.Post(iRoloDex.Models.PersonModels.PersonCreate)">
+            <summary>
+            This command will create a person record in the persons table of the iRoloDex database for the current owner.
+            </summary>
+            <param name="person">The parameters required for this request are listed below.</param>
+            <returns>Running this endpoint will return a 200 response and a '1' to indicate a person record was successfully created.</returns>
+        </member>
+        <member name="M:iRoloDex.WebAPI.Controllers.PersonController.Get">
+            <summary>
+            This command will display all the Persons an owner has created and that exist in the persons table of the iRoloDex database.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:iRoloDex.WebAPI.Controllers.PersonController.Get(System.Int32)">
+            <summary>
+            This command will retrieve a single person record by it's ID from the persons table in the iRoloDex database.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iRoloDex.WebAPI.Controllers.PersonController.Put(iRoloDex.Models.PersonModels.PersonEdit)">
+            <summary>
+            This command will update a person in the persons table of the iRoloDex database
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="M:iRoloDex.WebAPI.Controllers.PersonController.Delete(System.Int32)">
+            <summary>
+            This command will delete a person from the persons table in the iRoloDex database
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
         <member name="T:iRoloDex.WebAPI.Controllers.HouseholdController">
             <summary>
             </summary>

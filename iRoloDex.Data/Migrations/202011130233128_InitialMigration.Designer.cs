@@ -7,13 +7,13 @@ namespace iRoloDex.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class removeviewertables : IMigrationMetadata
+    public sealed partial class InitialMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(removeviewertables));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202011022341100_remove viewer tables"; }
+            get { return "202011130233128_InitialMigration"; }
         }
         
         string IMigrationMetadata.Source

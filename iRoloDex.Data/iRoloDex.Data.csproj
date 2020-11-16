@@ -93,45 +93,9 @@
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Entities\Owner.cs" />
     <Compile Include="Entities\Person.cs" />
-    <Compile Include="Migrations\202010292304359_DB setup.cs" />
-    <Compile Include="Migrations\202010292304359_DB setup.designer.cs">
-      <DependentUpon>202010292304359_DB setup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010302356288_Add HouseholdViewers to ApplicationUser.cs" />
-    <Compile Include="Migrations\202010302356288_Add HouseholdViewers to ApplicationUser.designer.cs">
-      <DependentUpon>202010302356288_Add HouseholdViewers to ApplicationUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010310019351_change.cs" />
-    <Compile Include="Migrations\202010310019351_change.designer.cs">
-      <DependentUpon>202010310019351_change.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010310135249_Add PersonViewers to ApplicationUser.cs" />
-    <Compile Include="Migrations\202010310135249_Add PersonViewers to ApplicationUser.designer.cs">
-      <DependentUpon>202010310135249_Add PersonViewers to ApplicationUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010310143582_test.cs" />
-    <Compile Include="Migrations\202010310143582_test.designer.cs">
-      <DependentUpon>202010310143582_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010311947328_test owner.cs" />
-    <Compile Include="Migrations\202010311947328_test owner.designer.cs">
-      <DependentUpon>202010311947328_test owner.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011022341100_remove viewer tables.cs" />
-    <Compile Include="Migrations\202011022341100_remove viewer tables.designer.cs">
-      <DependentUpon>202011022341100_remove viewer tables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011030020233_add icollections to person.cs" />
-    <Compile Include="Migrations\202011030020233_add icollections to person.designer.cs">
-      <DependentUpon>202011030020233_add icollections to person.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011030042404_add icollection to Relationship.cs" />
-    <Compile Include="Migrations\202011030042404_add icollection to Relationship.designer.cs">
-      <DependentUpon>202011030042404_add icollection to Relationship.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011030322397_merge updates.cs" />
-    <Compile Include="Migrations\202011030322397_merge updates.designer.cs">
-      <DependentUpon>202011030322397_merge updates.cs</DependentUpon>
+    <Compile Include="Migrations\202011130233128_InitialMigration.cs" />
+    <Compile Include="Migrations\202011130233128_InitialMigration.designer.cs">
+      <DependentUpon>202011130233128_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202011100353232_viewers update.cs" />
     <Compile Include="Migrations\202011100353232_viewers update.designer.cs">
@@ -178,6 +142,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011130233128_InitialMigration.resx">
+      <DependentUpon>202011130233128_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
