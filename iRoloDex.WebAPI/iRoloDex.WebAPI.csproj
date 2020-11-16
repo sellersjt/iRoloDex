@@ -44,6 +44,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>App_Data/XmlDocument.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -238,7 +239,35 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\HelpPage\ApiDescriptionExtensions.vb" />
+    <Content Include="Areas\HelpPage\App_Start\HelpPageConfig.vb" />
+    <Content Include="Areas\HelpPage\Controllers\HelpController.vb" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Areas\HelpPage\HelpPageAreaRegistration.vb" />
+    <Content Include="Areas\HelpPage\HelpPageConfigurationExtensions.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\ModelDescription.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.vb" />
+    <Content Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.vb" />
+    <Content Include="Areas\HelpPage\Models\HelpPageApiModel.vb" />
+    <Content Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.vb" />
+    <Content Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.vb" />
+    <Content Include="Areas\HelpPage\SampleGeneration\ImageSample.vb" />
+    <Content Include="Areas\HelpPage\SampleGeneration\InvalidSample.vb" />
+    <Content Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.vb" />
+    <Content Include="Areas\HelpPage\SampleGeneration\SampleDirection.vb" />
+    <Content Include="Areas\HelpPage\SampleGeneration\TextSample.vb" />
+    <Content Include="Areas\HelpPage\XmlDocumentationProvider.vb" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -267,6 +296,25 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Areas\HelpPage\Views\_ViewStart.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.vbhtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.vbhtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
