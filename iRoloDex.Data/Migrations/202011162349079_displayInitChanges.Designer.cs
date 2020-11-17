@@ -7,13 +7,13 @@ namespace iRoloDex.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class InitialMigration : IMigrationMetadata
+    public sealed partial class displayInitChanges : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(displayInitChanges));
         
         string IMigrationMetadata.Id
         {
-            get { return "202011130233128_InitialMigration"; }
+            get { return "202011162349079_displayInitChanges"; }
         }
         
         string IMigrationMetadata.Source

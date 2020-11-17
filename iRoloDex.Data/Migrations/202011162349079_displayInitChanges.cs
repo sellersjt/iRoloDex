@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class viewersupdate : DbMigration
+    public partial class displayInitChanges : DbMigration
     {
         public override void Up()
         {
