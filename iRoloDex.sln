@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRoloDex.Models", "iRoloDex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRoloDex.Services", "iRoloDex.Services\iRoloDex.Services.csproj", "{DDB32C69-FBF3-4A6C-BBD6-4D3DB4E6CBB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRoloDex.WebUI", "iRoloDex.WebUI\iRoloDex.WebUI.csproj", "{39192ACF-35C3-43CC-94C2-A34FBD6B7CB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DDB32C69-FBF3-4A6C-BBD6-4D3DB4E6CBB7}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{DDB32C69-FBF3-4A6C-BBD6-4D3DB4E6CBB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDB32C69-FBF3-4A6C-BBD6-4D3DB4E6CBB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39192ACF-35C3-43CC-94C2-A34FBD6B7CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39192ACF-35C3-43CC-94C2-A34FBD6B7CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39192ACF-35C3-43CC-94C2-A34FBD6B7CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39192ACF-35C3-43CC-94C2-A34FBD6B7CB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
