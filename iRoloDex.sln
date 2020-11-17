@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRoloDex.WebAPI", "iRoloDex.WebAPI\iRoloDex.WebAPI.csproj", "{E2485DA6-2FCC-442E-B692-2A8451D126D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRoloDex.Data", "iRoloDex.Data\iRoloDex.Data.csproj", "{EB2C2CA9-462C-4216-800B-4267A98D5BC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRoloDex.Models", "iRoloDex.Models\iRoloDex.Models.csproj", "{38F3261D-0225-4849-887E-EC86B302A33B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRoloDex.Services", "iRoloDex.Services\iRoloDex.Services.csproj", "{DDB32C69-FBF3-4A6C-BBD6-4D3DB4E6CBB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2485DA6-2FCC-442E-B692-2A8451D126D9}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{E2485DA6-2FCC-442E-B692-2A8451D126D9}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{E2485DA6-2FCC-442E-B692-2A8451D126D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2485DA6-2FCC-442E-B692-2A8451D126D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB2C2CA9-462C-4216-800B-4267A98D5BC8}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{EB2C2CA9-462C-4216-800B-4267A98D5BC8}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{EB2C2CA9-462C-4216-800B-4267A98D5BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB2C2CA9-462C-4216-800B-4267A98D5BC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F3261D-0225-4849-887E-EC86B302A33B}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{38F3261D-0225-4849-887E-EC86B302A33B}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{38F3261D-0225-4849-887E-EC86B302A33B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F3261D-0225-4849-887E-EC86B302A33B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDB32C69-FBF3-4A6C-BBD6-4D3DB4E6CBB7}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB32C69-FBF3-4A6C-BBD6-4D3DB4E6CBB7}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{DDB32C69-FBF3-4A6C-BBD6-4D3DB4E6CBB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB32C69-FBF3-4A6C-BBD6-4D3DB4E6CBB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77B78319-6018-4077-886D-A17B368975FC}
+	EndGlobalSection
+EndGlobal
