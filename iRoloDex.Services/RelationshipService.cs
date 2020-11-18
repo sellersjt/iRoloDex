@@ -23,7 +23,6 @@ namespace iRoloDex.Services
         {
             var entity = new Relationship()
             {
-                Name = model.Name,
                 RelationshipType = model.RelationshipType
             };
 
@@ -44,7 +43,6 @@ namespace iRoloDex.Services
                     .Select(e => new RelationshipListItem
                     {
                         RelationshipId = e.RelationshipId,
-                        Name = e.Name,
                         RelationshipType = e.RelationshipType
                     });
                 return query.ToArray();
@@ -61,7 +59,6 @@ namespace iRoloDex.Services
                 return new RelationshipDetail
                 {
                     RelationshipId = entity.RelationshipId,
-                    Name = entity.Name,
                     RelationshipType = entity.RelationshipType
                 };
             }
@@ -76,9 +73,7 @@ namespace iRoloDex.Services
                     .Single(e => e.RelationshipId == model.RelationshipId );
 
                 entity.RelationshipId = model.RelationshipId;
-                entity.Name = model.Name;
                 entity.RelationshipType = model.RelationshipType;
-                entity.ModifiedUtc = DateTimeOffset.Now;
 
                 return ctx.SaveChanges() == 1;
             }

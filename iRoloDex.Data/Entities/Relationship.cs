@@ -12,11 +12,7 @@ namespace iRoloDex.Data.Entities
         [Key]
         public int RelationshipId { get; set; }
         [Required]
-        public string Name { get; set; }
         public string RelationshipType { get; set; }
-        [Required]
-        public DateTimeOffset CreatedUtc { get; set; }
-        public DateTimeOffset ModifiedUtc { get; set; }
         //public virtual ICollection<Person> Persons { get; set; }
     }
 }

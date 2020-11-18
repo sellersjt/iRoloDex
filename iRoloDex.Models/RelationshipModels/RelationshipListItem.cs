@@ -10,7 +10,6 @@ namespace iRoloDex.Models.RelationshipModels
     public class RelationshipListItem
     {
         public int RelationshipId { get; set; }
-        public string Name { get; set; }
         public string RelationshipType { get; set; }
     }
 }
